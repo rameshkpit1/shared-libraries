@@ -84,7 +84,7 @@ def call(Map configMap){
             echo "deploying"
             echo "$packageVersion"
             def params = [
-              string(name: 'version', value: "$packageVersion")
+              string(name: 'version', value: "$packageVersion"),
               string(name: 'environment', value: "dev")
             ]
             build job: "../${component}-deploy", wait: true, parameters: params
