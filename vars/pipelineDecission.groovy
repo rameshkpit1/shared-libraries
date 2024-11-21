@@ -3,7 +3,7 @@ def decidePipeline(Map configMap){
   application = configMap.get("application")
     switch(application){
       case 'nodeJSVM':
-        echo "application NodeJS and VM"
+        nodeJSVMCI(configMap)  //nodeJSVMCI.call(configMap)  you can also give like this.But call funtion will automatically call if it is call function.
         break
       case 'javaVM':
         javaVMCI(configMap)
@@ -13,5 +13,5 @@ def decidePipeline(Map configMap){
         break
       
     }
-  echo " I need to take the decission based on the map you sent"
+
 }
