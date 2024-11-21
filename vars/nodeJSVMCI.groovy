@@ -1,3 +1,4 @@
+#!groovy
 pipeline{
   agent { node { label 'agent-1'}}
   parameters{
