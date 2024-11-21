@@ -2,10 +2,10 @@
 def decidePipeline(Map configMap){
   application = configMap.get("application")
     switch(application){
-      case 'nodeJSVM'
+      case 'nodeJSVM':
         echo "application NodeJS and VM"
         break
-      case 'javaVM'
+      case 'javaVM':
         javaVMCI(configMap)
         break
       default:
